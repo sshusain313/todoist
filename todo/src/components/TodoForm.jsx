@@ -4,10 +4,11 @@ import { useTodo } from '../context'
 function TodoForm() {
     const [todo, setTodo]=useState("")
     const {addTodo}=useTodo()
+
     const add=(e)=>{
         e.preventDefault()
-        if (!todo) return
-        addTodo({todo, completed:false})
+        // if (!todo) return              experiment
+        addTodo({todo})
         setTodo("")
     }
   return (
